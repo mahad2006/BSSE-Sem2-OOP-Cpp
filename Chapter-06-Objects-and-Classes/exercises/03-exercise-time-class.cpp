@@ -1,4 +1,3 @@
-// 03-exercise-time-class.cpp
 #include <iostream>
 using namespace std;
 

@@ -1,4 +1,3 @@
-// 11-exercise-fraction-calculator.cpp
 #include <iostream>
 #include <cmath> // for abs
 using namespace std;

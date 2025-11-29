@@ -1,4 +1,3 @@
-// 04-exercise-employee.cpp
 #include <iostream>
 using namespace std;
 

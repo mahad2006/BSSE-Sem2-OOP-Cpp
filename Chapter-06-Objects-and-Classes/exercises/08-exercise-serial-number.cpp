@@ -1,4 +1,3 @@
-// 08-exercise-serial-number.cpp
 #include <iostream>
 using namespace std;
 

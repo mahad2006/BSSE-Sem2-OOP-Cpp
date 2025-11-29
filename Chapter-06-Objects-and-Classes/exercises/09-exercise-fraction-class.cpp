@@ -1,4 +1,3 @@
-// 09-exercise-fraction-class.cpp
 #include <iostream>
 using namespace std;
 

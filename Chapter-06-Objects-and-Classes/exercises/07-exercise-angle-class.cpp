@@ -1,4 +1,3 @@
-// 07-exercise-angle-class.cpp
 #include <iostream>
 using namespace std;
 

@@ -1,4 +1,3 @@
-// 06-exercise-employee-enum.cpp
 #include <iostream>
 using namespace std;
 
