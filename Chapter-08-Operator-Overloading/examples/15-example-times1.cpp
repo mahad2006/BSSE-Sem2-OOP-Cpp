@@ -82,25 +82,12 @@ public:
     // Conversion Operator to Time12
     operator Time12() const
     {
-        int hrs24 = hours;
-        bool pm = hours < 12 ? false : true;
-
-        int roundMins = seconds < 30 ? minutes : minutes + 1;
-        if (roundMins == 60)
-        {
-            roundMins = 0;
-            ++hrs24;
-            if (hrs24 == 12 || hrs24 == 24)
-                pm = (pm == true) ? false : true;
+        bool pm = (hours >= 12);
+        int hrs12 = (pm) ? hours - 12 : hours;
+        int roundMins = minutes;
+        if(seconds >= 30){
+            roundMins++;
         }
-
-        int hrs12 = (hrs24 < 13) ? hrs24 : hrs24 - 12;
-        if (hrs12 == 0)
-        {
-            hrs12 = 12;
-            pm = false;
-        }
-
         return Time12(pm, hrs12, roundMins);
     }
 };
