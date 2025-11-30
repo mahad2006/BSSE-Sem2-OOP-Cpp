@@ -13,10 +13,10 @@ public:
     void show() {}
 };
 
-class B : public A
+class B : virtual public A
 {
 };
-class C : public A
+class C : virtual public A
 {
 };
 
@@ -26,9 +26,6 @@ public:
     // Ambiguity exists here because D inherits A twice (via B and C)
     D() {}
     ~D() {}
-    void set() {}
-    void get() {}
-    void show() {}
 };
 
 int main()
@@ -37,8 +34,8 @@ int main()
     // objD.func(); // Error: Ambiguous
 
     // Resolution
-    objD.B::func();
-    objD.C::func();
+    objD.func();
+    objD.func();
 
     return 0;
 }
